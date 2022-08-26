@@ -17,6 +17,8 @@ steps:
     - 'CLIENT_SECRET=${_CLIENT_SECRET}'
     - 'REFRESH_TOKEN=${_REFRESH_TOKEN}'
     - 'ASGARDEO_URL=${_ASGARDEO_URL}'
+    - 'GCP_PROJECT_ID=${_GCP_PROJECT_ID}'
+    - 'GCP_BUCKET_NAME=${_GCP_BUCKET_NAME}'
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
 timeout: "1600s"
