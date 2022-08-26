@@ -28,6 +28,6 @@ router.post("/Status-Check", auth_user, status_check_api);
 router.post("/Fetch-Pending-Requests", auth_officer,pending_certificate_request_api);
 router.post("/Fetch-Certificate-Details", auth_officer, fetch_certificate_details_api);
 router.put("/Update-Certificate-Status", auth_officer, update_status_api);
-router.post("/Image-Upload", multer.array("imgfile"), upload_image_api);
+router.post("/Image-Upload", auth_user, multer.array("imgfile"), upload_image_api);
 
 export default router;
