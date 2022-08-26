@@ -4,13 +4,7 @@ import { send_slack_message } from "../utils/slack-message.js";
 import { Storage} from "@google-cloud/storage";
 dotenv.config();
 
-let projectId = process.env.GCP_PROJECT_ID; 
-let keyFilename = "./utils/gcp-key.json";
-const storage = new Storage({
-  projectId,  
-  keyFilename,
-});
-
+const storage = new Storage();
 const bucket = storage.bucket(process.env.GCP_BUCKET_NAME);
 
 /* method add user uploded images to the google bucket*/
