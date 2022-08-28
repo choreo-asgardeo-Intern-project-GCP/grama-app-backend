@@ -32,10 +32,10 @@ export const police_check_api = async(req, res) =>{
 
         if (error.response.status == 404){
             const policeReport = {
-                suspect_severity: "",
-                police_officer_id: "",
-                criminal_history: "",
-                report_number: ""
+                suspect_severity: "N/A",
+                police_officer_id: "N/A",
+                criminal_history: "N/A",
+                report_number: "N/A"
             }
             handdlePoliceData(policeReport, user_nic, res);
 
