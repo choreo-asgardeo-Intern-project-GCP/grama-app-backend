@@ -19,7 +19,7 @@ export const pending_certificate_request_api = async(req, res) =>{
                   let user_data = {
                     user_nic: object.user_nic,
                     user_full_name: object.user_full_name,
-                    user_provided_address: object.user_provided_address,
+                    user_full_address: object.user_full_address,
                     user_phone_number: object.user_phone_number
                   }
 
@@ -29,7 +29,7 @@ export const pending_certificate_request_api = async(req, res) =>{
                 res.status(200).json({status: "success", filterd_certificate_data});
 
             } else{
-                res.status(400).json({status: "failed", message: "Invalid officer id or No new records exists"});
+                res.status(400).json({status: "failed", message: "No new records exists"});
             }
 
       } catch (error) {
