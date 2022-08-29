@@ -1,7 +1,7 @@
 //import dependancies
 import express from "express";
 import bodyParser from "body-parser";
-import cors from "cors";
+// import cors from "cors";
 import routes from "./routes/api-routes.js";
 import mongoose from "mongoose";
 import dotenv  from "dotenv";
@@ -11,8 +11,8 @@ const app = express ();
 app.use(bodyParser.json({limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 
-app.use(cors());
-app.options('*', cors())
+// app.use(cors());
+// app.options('*', cors())
 
 
 const connectionUrl = process.env.CONNECTION_URL; 
