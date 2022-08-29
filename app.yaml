@@ -1,3 +1,5 @@
 runtime: nodejs16
 service: grama-app-backend
-instance_class: F4_1G
+instance_class: B8
+manual_scaling:
+  instances: 1
