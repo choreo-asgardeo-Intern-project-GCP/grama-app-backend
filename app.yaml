@@ -1,6 +1,7 @@
 runtime: nodejs16
 service: grama-app-backend
 handlers:
-- url: /.*
+- url: /images
+  static_dir: static/images
   http_headers:
-    Access-Control-Allow-Origin: '*'
+    Access-Control-Allow-Origin: "*"
