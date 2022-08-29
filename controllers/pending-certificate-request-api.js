@@ -26,6 +26,7 @@ export const pending_certificate_request_api = async(req, res) =>{
                   filterd_certificate_data.push(user_data);
                 });
 
+                res.set('access-control-allow-origin', '*')
                 res.status(200).json({status: "success", filterd_certificate_data});
 
             } else{
