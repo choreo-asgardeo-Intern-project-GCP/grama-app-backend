@@ -11,17 +11,7 @@ const app = express ();
 app.use(bodyParser.json({limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 
-// app.use(cors());
-// app.options('*', cors())
-
-const corsOptions ={
-   origin:'*', 
-   credentials:true,            //access-control-allow-credentials:true
-   optionSuccessStatus:200,
-}
-
-app.use(cors(corsOptions))
-
+app.use(cors());
 
 const connectionUrl = process.env.CONNECTION_URL; 
 const PORT = process.env.PORT || 5000;
