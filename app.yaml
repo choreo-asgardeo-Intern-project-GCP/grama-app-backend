@@ -3,3 +3,7 @@ service: grama-app-backend
 instance_class: B8
 manual_scaling:
   instances: 1
+handlers:
+- url: /
+  http_headers:
+    Access-Control-Allow-Origin: '*'
