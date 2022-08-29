@@ -1,7 +1,7 @@
 //import dependancies
 import express from "express";
 import bodyParser from "body-parser";
-import cors from "cors";
+// import cors from "cors";
 import routes from "./routes/api-routes.js";
 import mongoose from "mongoose";
 import dotenv  from "dotenv";
