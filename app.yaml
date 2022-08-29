@@ -1,2 +1,3 @@
 runtime: nodejs16
 service: grama-app-backend
+instance_class: F4_1G
