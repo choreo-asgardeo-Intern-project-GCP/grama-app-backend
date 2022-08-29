@@ -1,6 +1,6 @@
 runtime: nodejs16
 service: grama-app-backend
 handlers:
-- url: /
+- url: /*
   http_headers:
     Access-Control-Allow-Origin: '*'
