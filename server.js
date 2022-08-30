@@ -1,7 +1,7 @@
 //import dependancies
 import express from "express";
 import bodyParser from "body-parser";
-import cors from "cors";
+// import cors from "cors";
 import routes from "./routes/api-routes.js";
 import mongoose from "mongoose";
 import dotenv  from "dotenv";
@@ -11,9 +11,9 @@ const app = express ();
 app.use(bodyParser.json({limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 
-app.use(cors({
-    origin: "https://nimbuzz01.github.io",
-}))
+// app.use(cors({
+//     origin: "https://nimbuzz01.github.io",
+// }))
 
 const connectionUrl = process.env.CONNECTION_URL; 
 const PORT = process.env.PORT || 8080;
