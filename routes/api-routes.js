@@ -11,6 +11,8 @@ const multer = Multer({
   },
 });
 
+
+
 import { id_check_api } from "../controllers/identity-check-api.js";
 import { address_check_api } from "../controllers/address-check-api.js";
 import { police_check_api } from "../controllers/police-check-api.js";
@@ -19,6 +21,8 @@ import { pending_certificate_request_api } from "../controllers/pending-certific
 import { fetch_certificate_details_api } from "../controllers/fetch-certificate-details-api.js";
 import { update_status_api } from "../controllers/update-status-api.js";
 import { upload_image_api } from "../utils/image-upload.js";
+
+router.options("/Fetch-Certificate-Details", auth_officer, fetch_certificate_details_api)
 
 //routes
 router.post("/Identity-Check", auth_user, id_check_api);
