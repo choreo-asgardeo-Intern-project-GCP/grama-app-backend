@@ -12,7 +12,7 @@ app.use(bodyParser.json({limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 
 app.use(cors({
-    origin: "https://nimbuzz01.github.io",
+    origin: "*",
 }))
 
 const connectionUrl = process.env.CONNECTION_URL; 
