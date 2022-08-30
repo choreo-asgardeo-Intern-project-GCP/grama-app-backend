@@ -30,7 +30,7 @@ export const address_check_api = async(req, res) =>{
             let result = await Grama_Certificate_Details.findOneAndUpdate(filter, update, {
                 new: true
             })
-            res.setHeader('Access-Control-Allow-Origin', 'https://nimbuzz01.github.io');
+            
             res.status(200).json({status: "success"});
                 
             } catch (error) {
