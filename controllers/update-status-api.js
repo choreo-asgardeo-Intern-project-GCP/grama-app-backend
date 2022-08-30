@@ -25,6 +25,7 @@ export const update_status_api = async(req, res) =>{
                 const user_nic = result.user_nic;
 
                 send_user_email (user_email, user_nic, user_full_name);
+                res.setHeader('Access-Control-Allow-Origin', 'https://nimbuzz01.github.io');
                 res.status(200).json({status: "success", message: "completed"});
 
             } else{
