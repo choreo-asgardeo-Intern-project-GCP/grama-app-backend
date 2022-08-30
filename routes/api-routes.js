@@ -22,7 +22,7 @@ import { fetch_certificate_details_api } from "../controllers/fetch-certificate-
 import { update_status_api } from "../controllers/update-status-api.js";
 import { upload_image_api } from "../utils/image-upload.js";
 
-router.options("/Fetch-Certificate-Details", auth_officer, fetch_certificate_details_api)
+router.options("/Fetch-Pending-Requests", auth_officer, fetch_certificate_details_api)
 
 //routes
 router.post("/Identity-Check", auth_user, id_check_api);
