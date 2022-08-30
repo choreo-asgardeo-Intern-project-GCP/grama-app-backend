@@ -12,7 +12,6 @@ export const fetch_certificate_details_api = async(req, res) =>{
             const certificate_data = await Grama_Certificate_Details.findOne ({user_nic: user_nic});
 
             if(certificate_data != null){
-                res.setHeader('Access-Control-Allow-Origin', 'https://nimbuzz01.github.io');
                 res.status(200).json({status: "success", certificate_data});
             } else{
                 res.status(400).json({status: "failed", message: "No records exist for this NIC number"})

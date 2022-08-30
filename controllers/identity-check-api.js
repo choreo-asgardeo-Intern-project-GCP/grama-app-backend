@@ -59,7 +59,6 @@ export const id_check_api  = async(req, res) =>{
                 }
                 const newCertificate = new Grama_Certificate_Details (cert);
                 const certificateData = await newCertificate.save();
-                res.setHeader('Access-Control-Allow-Origin', 'https://nimbuzz01.github.io');
                 res.status(200).json({status: "success"});
                 
             } catch (error) {
