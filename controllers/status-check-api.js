@@ -23,7 +23,7 @@ export const status_check_api = async(req, res) =>{
                 }else{
                     res_message = "Completed";
                 }
-
+                res.setHeader('Access-Control-Allow-Origin', 'https://nimbuzz01.github.io');
                 res.status(200).json({status: certificate_status, message: res_message});
 
             } else{
