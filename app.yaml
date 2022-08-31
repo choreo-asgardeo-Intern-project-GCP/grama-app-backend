@@ -1,4 +1,4 @@
 runtime: nodejs16
 service: grama-app-backend
 manual_scaling:
-      instances: 1
+      instances: 20
